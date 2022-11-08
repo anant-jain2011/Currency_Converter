@@ -55,7 +55,7 @@ const getData = async () => {
             .then(response => {
                 return response.json();
             }).then(data => {
-                p.innerHTML = "Result is: " + (data.rates[to]) * amount;
+                p.innerHTML = `${amount}${from.innerText.slice(0, 2)} = ${(data.rates[to]) * amount}${to.innerText.slice(0, 2)}`;
             })
     }
     select.onchange = displayResult;
