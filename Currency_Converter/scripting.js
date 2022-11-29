@@ -80,6 +80,8 @@ const getData = async () => {
 
     document.body.append(li1);
     document.body.append(select);
+    
+    document.body.append(swapBtn);
 
     document.body.append(li2);
     document.body.append(select2);
