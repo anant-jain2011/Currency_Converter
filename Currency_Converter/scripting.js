@@ -17,6 +17,14 @@ const getData = async () => {
 
     let select = document.createElement("select");
     select.classList.add("from");
+    
+    let swapImg = document.createElement("img");
+    swapImg.src= "https://icon-library.com/images/swap-icon/swap-icon-23.jpg";
+    swapImg.classList.add("swap");
+
+    let swapBtn = document.createElement("button");
+    swapBtn.classList.add("swap");
+    swapBtn.append(swapImg);
 
     let select2 = document.createElement("select");
     select2.classList.add("to");
