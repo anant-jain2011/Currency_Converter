@@ -1,41 +1,46 @@
 const getData = async () => {
 
-    let br = document.createElement("br");
-    let br2 = document.createElement("br");
-    let br3 = document.createElement("br");
+    const create = (elem) => {
+        return document.createElement(elem)
+    }
 
-    let p = document.createElement("p");
+    let br = create("br");
+    let br2 = create("br");
+    let br3 = create("br");
+
+    let p = create("p");
     p.innerHTML = "The result will  <br>    <br>     be shown here";
 
-    let li1 = document.createElement("p");
+    let li1 = create("p");
     li1.innerHTML = "From:";
 
-    let li2 = document.createElement("p");
+    let li2 = create("p");
     li2.innerHTML = "To:";
 
-    let li3 = document.createElement("p");
+    let li3 = create("p");
     li3.innerHTML = "Amount:";
 
-    let select = document.createElement("select");
+    let select = create("select");
     select.classList.add("from");
 
-    let swapImg = document.createElement("img");
+    let swapImg = create("img");
     swapImg.src = "https://icon-library.com/images/swap-icon/swap-icon-23.jpg";
     swapImg.classList.add("swap2");
     swapImg.draggable = false;
+    swapImg.alt= "Swap button image"
     swapImg.addEventListener("contextmenu", function (e) {
         e.preventDefault();
         return false;
     }, false);
 
-    let swapBtn = document.createElement("button");
+    let swapBtn = create("button");
     swapBtn.classList.add("swap");
     swapBtn.append(swapImg);
 
-    let select2 = document.createElement("select");
+    let select2 = create("select");
     select2.classList.add("to");
 
-    let amt = document.createElement("input");
+    let amt = create("input");
     amt.placeholder = "Enter Amount here:-";
     amt.type = "number";
     amt.value = 1;
@@ -43,11 +48,11 @@ const getData = async () => {
 
     const displayItems = (data, data2) => {
         for (let i = 0; i < data.length; i++) {
-            let option = document.createElement("option");
+            let option = create("option");
             option.innerHTML = data[i] + ': ' + data2[i];
             option.value = data[i]
 
-            let option2 = document.createElement("option");
+            let option2 = create("option");
             option2.innerHTML = data[i] + ': ' + data2[i];
             option2.value = data[i]
 
