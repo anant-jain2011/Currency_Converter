@@ -1,5 +1,6 @@
 const getData = async () => {
 
+    // write a function to create a new element
     const create = (elem) => {
         return document.createElement(elem)
     }
@@ -27,7 +28,7 @@ const getData = async () => {
     swapImg.src = "https://icon-library.com/images/swap-icon/swap-icon-23.jpg";
     swapImg.classList.add("swap2");
     swapImg.draggable = false;
-    swapImg.alt= "Swap button image"
+    swapImg.alt = "Swap button image"
     swapImg.addEventListener("contextmenu", function (e) {
         e.preventDefault();
         return false;
@@ -45,7 +46,6 @@ const getData = async () => {
     amt.type = "number";
     amt.value = 1;
 
-
     const displayItems = (data, data2) => {
         for (let i = 0; i < data.length; i++) {
             let option = create("option");
@@ -60,6 +60,7 @@ const getData = async () => {
             select2.appendChild(option2);
         }
     }
+
     const swap = () => {
         let temp = select.value;
         select.value = select2.value;
@@ -84,6 +85,7 @@ const getData = async () => {
                 p.innerHTML = `Result is ${(data.rates[to]) * amount}`;
             })
     }
+    
     select.onchange = displayResult;
     select2.onchange = displayResult;
     amt.onkeyup = displayResult;
@@ -97,22 +99,27 @@ const getData = async () => {
     li2.classList.add("list");
     li3.classList.add("list");
 
-    document.body.append(li1);
-    document.body.append(select);
 
-    document.body.append(br3);
+    // write a function to append all the elements to the body
+    const append = function (element) {
+        return document.body.append(element);
+    }
+    append(li1);
+    append(select);
 
-    document.body.append(swapBtn);
+    append(br3);
 
-    document.body.append(li2);
-    document.body.append(select2);
+    append(swapBtn);
 
-    document.body.append(li3);
-    document.body.append(amt);
+    append(li2);
+    append(select2);
 
-    document.body.append(br);
-    document.body.append(br2);
+    append(li3);
+    append(amt);
 
-    document.body.append(p);
+    append(br);
+    append(br2);
+
+    append(p);
 }
 getData();
