@@ -9,6 +9,9 @@ const getData = async () => {
     let br2 = create("br");
     let br3 = create("br");
 
+    let heading = create("h1");
+    heading.textContent = "Mast Converter";
+
     let p = create("p");
     p.innerHTML = "The result will  <br>    <br>     be shown here";
 
@@ -91,7 +94,7 @@ const getData = async () => {
     amt.onkeyup = displayResult;
     swapBtn.onclick = swap;
 
-    amt.classList.add("amount")
+    amt.classList.add("amount");
 
     p.classList.add("result");
 
@@ -104,6 +107,8 @@ const getData = async () => {
     const append = function (element) {
         return document.body.append(element);
     }
+    append(heading);
+
     append(li1);
     append(select);
 
@@ -122,4 +127,5 @@ const getData = async () => {
 
     append(p);
 }
+
 getData();
