@@ -10,6 +10,7 @@
     <title>Mast Converter</title>
     <link rel="shortcut icon" href="IMG_20230226_183725.png" />
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="manifest" href="manifest.json">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5117750377623591" crossorigin="anonymous"></script>
 </head>
 
@@ -17,4 +18,9 @@
 </body>
 
 <script src="scripting.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+    }
+</script>
 </html>
