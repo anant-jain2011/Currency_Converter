@@ -1,0 +1,18 @@
+
+{
+    "name": "Mast Conveter",
+    "short_name": "MastConverter",
+    "start_url": "/?home=true",
+    "icons": [
+      {
+        "src": "https://raw.githubusercontent.com/anant-jain2011/Currency_Converter/main/Currency_Converter/IMG_20230226_183725.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable any"
+      }
+    ],
+    "theme_color": "#73AD21",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "orientation": "portrait"
+}
